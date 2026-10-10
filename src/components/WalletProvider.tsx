@@ -24,8 +24,11 @@ export default function AppWalletProvider({
   const wallets = useMemo(() => [new PhantomWalletAdapter()], []);
 
   return (
+    // @ts-ignore - temporary fix for wallet-adapter + React 18 type conflict
     <ConnectionProvider endpoint={endpoint}>
+      {/* @ts-ignore */}
       <WalletProvider wallets={wallets} autoConnect>
+        {/* @ts-ignore */}
         <WalletModalProvider>{children}</WalletModalProvider>
       </WalletProvider>
     </ConnectionProvider>
