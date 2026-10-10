@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #030712;
+  --foreground: #f9fafb;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+
+/* Wallet adapter button overrides */
+.wallet-adapter-button {
+  font-family: inherit !important;
+}
+
+.wallet-adapter-modal-wrapper {
+  z-index: 100 !important;
+}
